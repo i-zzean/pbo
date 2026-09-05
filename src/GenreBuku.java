@@ -3,6 +3,7 @@ public class GenreBuku {
     private String namaGenre;
 
     public GenreBuku(String namaGenre){
+        this.idGenre = "" + Math.floor(Math.random()* 101);
         this.namaGenre = namaGenre;
     }
 
@@ -10,5 +11,5 @@ public class GenreBuku {
         return "id : " + idGenre + " Nama : " + namaGenre;
     };
 
-    
+
 }
