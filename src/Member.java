@@ -3,52 +3,51 @@ import java.util.List;
 
 public class Member {
     private String idMember;
-    private String namaMember;
-    private String nomorTelepon;
-    private List<Buku> daftarPinjaman;
+    private String nama;
+    private String email;
+    private List<Buku> bukuPinjaman;
 
-    public Member(String idMember, String namaMember, String nomorTelepon) {
+    public Member(String idMember, String nama, String email) {
         this.idMember = idMember;
-        this.namaMember = namaMember;
-        this.nomorTelepon = nomorTelepon;
-        this.daftarPinjaman = new ArrayList<>();
+        this.nama = nama;
+        this.email = email;
+        this.bukuPinjaman = new ArrayList<>();
     }
 
-    // Getter
     public String getIdMember() {
         return idMember;
     }
 
-    public String getNamaMember() {
-        return namaMember;
+    public String getNama() {
+        return nama;
     }
 
-    public String getNomorTelepon() {
-        return nomorTelepon;
+    public String getEmail() {
+        return email;
     }
 
-    public List<Buku> getDaftarPinjaman() {
-        return daftarPinjaman;
+    public List<Buku> getBukuPinjaman() {
+        return bukuPinjaman;
     }
 
-    // Update Profil Member
-    public void updateMember(String namaMember, String nomorTelepon) {
-        this.namaMember = namaMember;
-        this.nomorTelepon = nomorTelepon;
-    }
-
-    // Fitur Peminjaman & Pengembalian
     public void pinjamBuku(Buku buku) {
         if (buku != null) {
-            daftarPinjaman.add(buku);
+            bukuPinjaman.add(buku);
         }
     }
 
     public void kembalikanBuku(Buku buku) {
-        daftarPinjaman.remove(buku);
+        bukuPinjaman.remove(buku);
     }
 
-    public String getInfo() {
-        return "ID Member : " + idMember + " | Nama : " + namaMember + " | No. Telp : " + nomorTelepon + " | Jumlah Pinjaman : " + daftarPinjaman.size();
+    public void tampilkanPinjaman() {
+        System.out.println("=== Buku Dipinjam oleh " + nama + " ===");
+        if (bukuPinjaman.isEmpty()) {
+            System.out.println("Tidak ada buku yang sedang dipinjam.");
+        } else {
+            for (Buku buku : bukuPinjaman) {
+                System.out.println(buku.getInfo());
+            }
+        }
     }
 }
