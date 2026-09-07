@@ -5,12 +5,12 @@ public class Buku {
     private int tahunTerbit;
     private GenreBuku genre;
 
-    public Buku(String idBuku, String judulBuku, String penulis, int tahunTerbit, String genre){
+    public Buku(String idBuku, String judulBuku, String penulis, int tahunTerbit, GenreBuku genre){
         this.idBuku = idBuku;
         this.judulBuku = judulBuku;
         this.penulis = penulis;
         this.tahunTerbit = tahunTerbit;
-        this.genre = new GenreBuku(genre);
+        this.genre = genre;
     }
 
     public String getInfo(){
