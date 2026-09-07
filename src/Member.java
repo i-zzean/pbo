@@ -14,21 +14,7 @@ public class Member {
         this.bukuPinjaman = new ArrayList<>();
     }
 
-    public String getIdMember() {
-        return idMember;
-    }
 
-    public String getNama() {
-        return nama;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public List<Buku> getBukuPinjaman() {
-        return bukuPinjaman;
-    }
 
     public void pinjamBuku(Buku buku) {
         if (buku != null) {
@@ -50,4 +36,9 @@ public class Member {
             }
         }
     }
+
+    public String getInfo() {
+    return "ID Member : " + idMember + "Nama : " + nama + "Email : " + email;
+};
 }
+
