@@ -11,7 +11,7 @@ public class Member {
         this.idMember = idMember;
         this.nama = nama;
         this.email = email;
-        this.bukuPinjaman = new ArrayList<>();
+        this.bukuPinjaman = new ArrayList<Buku>();
     }
 
 
@@ -19,13 +19,13 @@ public class Member {
     public void pinjamBuku(Buku buku) {
         if (buku != null) {
             bukuPinjaman.add(buku);
-            System.out.println("Buku berhasil dipinjam");
+            System.out.println("Buku berhasil " + buku.getJudulBuku() + " dipinjam");
         }
     }
 
     public void kembalikanBuku(Buku buku) {
         bukuPinjaman.remove(buku);
-        System.out.println("Buku berhasil dikembalikan");
+        System.out.println("Buku berhasil " + buku.getJudulBuku() + " dikembalikan");
     }
 
     public void tampilkanPinjaman() {
