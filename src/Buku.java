@@ -13,6 +13,26 @@ public class Buku {
         this.genre = genre;
     }
 
+    public String getIdBuku() {
+        return  idBuku;
+    };
+
+    public String getJudulBuku() {
+        return  judulBuku;
+    };
+
+    public String getPenulis() {
+        return  penulis;
+    };
+
+    public int getTahunTerbit() {
+        return  tahunTerbit;
+    };
+
+    public GenreBuku getGenre(){
+        return  genre;
+    };
+
     public String getInfo(){
         return "ID : " + idBuku + "| Judul : " + judulBuku + "| Penulis : " + penulis + "| Tahun : " + tahunTerbit + "| Genre : " + genre;
     };
