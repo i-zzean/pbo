@@ -19,13 +19,13 @@ public class Member {
     public void pinjamBuku(Buku buku) {
         if (buku != null) {
             bukuPinjaman.add(buku);
-            System.out.println("Buku berhasil " + buku.getJudulBuku() + " dipinjam");
+            System.out.println("Buku " + buku.getJudulBuku() + " berhasil dipinjam");
         }
     }
 
     public void kembalikanBuku(Buku buku) {
         bukuPinjaman.remove(buku);
-        System.out.println("Buku berhasil " + buku.getJudulBuku() + " dikembalikan");
+        System.out.println("Buku " + buku.getJudulBuku() + " berhasil dikembalikan");
     }
 
     public void tampilkanPinjaman() {
