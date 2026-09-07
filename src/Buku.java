@@ -14,6 +14,6 @@ public class Buku {
     }
 
     public String getInfo(){
-        return "id : " + idBuku + " judul : " + judulBuku + " penulis : " + penulis + " tahun : " + tahunTerbit + " genre : " + genre;
+        return "ID : " + idBuku + "| Judul : " + judulBuku + "| Penulis : " + penulis + "| Tahun : " + tahunTerbit + "| Genre : " + genre;
     };
 }

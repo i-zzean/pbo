@@ -38,7 +38,7 @@ public class Member {
     }
 
     public String getInfo() {
-    return "ID Member : " + idMember + "Nama : " + nama + "Email : " + email;
+    return "ID Member : " + idMember + " | Nama : " + nama + " | Email : " + email;
 };
 }
 
