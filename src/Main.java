@@ -1,13 +1,14 @@
 public class Main {
     public static void main(String[] args) {
         AplikasiPerpus perpustakaan = new AplikasiPerpus();
+        
+        Member member = new Member("I001", "Ihsan", "akuihsan@apps.ipb.ac.id");
 
         GenreBuku genre1 = new GenreBuku("T01", "Technology");
         GenreBuku genre2 = new GenreBuku("H02", "Horror");
 
         Buku buku1 = new Buku("B001", "Dasar Java", "Medhanita", 2020, genre1);
         Buku buku2 = new Buku("B002", "Nightmare", "Stephen King", 2015, genre2);
-        Member member = new Member("I001", "Ihsan", "akuihsan@apps.ipb.ac.id");
 
         perpustakaan.tambahGenre(genre1);
         perpustakaan.tambahGenre(genre2);
